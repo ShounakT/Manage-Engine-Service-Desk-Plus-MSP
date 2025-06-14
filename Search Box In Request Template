@@ -1,0 +1,14 @@
+A search box can be in a request template in MESDP MSP. We can achieve this by adding HTML elements like TextBox, Item List, and several other html tags. There are several benefits of creating a searchbox as mentioned
+below:
+>> Single Template.
+>> All level CTIS can be configured in single click.
+>> Easy to use and understand for the end users.
+
+Steps to create a search box functionality:
+>> Create a TextBox HTML element with required CSS. All the element tags and CSS addition to be done through JavaScript only under the Field and Form Rules of Request Template.
+>> The search box created field can be added in the template using in built FAFR function of addElement() of JS.
+>> With the help of JS events like onKeyPressUp() and onKeyPressDown() we can get the text from the above created field and showcase the same in a div tag list. All the items can be configured as anchor tags with the
+content of CTIS.
+>> On click of the anchor element, we can retrieve the innerHTML text from the field and update the same to request template CTIS elements using in-built functions of populating fields.
+
+In this manner, a search box functionality can be added in the request template in the tool.
