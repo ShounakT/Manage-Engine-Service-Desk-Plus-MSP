@@ -1,0 +1,17 @@
+Apart from the in-built tool mechanism of converting an Incident to Service Request, we can create our own mechanism where the entire workflow can be modified. The custom implementation which I did in the tool
+benefits with below points:
+
+>> All required details can be copied from an Incident to new Service Request like Requester Details, Title, Description and CTIS.
+>> New SR can be created with minimal human intervention.
+>> The previous Incident ticket can be auto canceled.
+
+Steps to implement the functionality:
+
+>> We need to make sure that the templates of IN and SR are configured in such a manner that the templates are minimal.
+>> We can add a custom button to the template for conversion using the addElement() functionality of Page Scripts.
+>> Once the button is added, we can code further logic using JS. Using the in-built tool methods, we can store the Incident ticket details in the localStorage of the browser with appropriate naming convention.
+>> Once the details are stored in localStorage of the browser, we can then redirect the user to the required template of Service Request using template URL.
+>> Once Service Request page is loaded, we can auto populate the previous Incident details in the current Service Request template using the localStorage variable stored previously.
+>> Also, we can write Custom Trigger to dispose the previous Incident ticket on the action of Created of current Service Request.
+
+In this way, we can achieve the fucntionality of Request conversion.
