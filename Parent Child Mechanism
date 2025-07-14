@@ -1,0 +1,19 @@
+Parent-Child Mechanism:
+
+With the help of Parent Child mechanism, the engineers in the tool can perform bulk operations on a group of tickets. Because of this, all the manual efforts would be saved and the process can be completely automated.
+Here are the below steps by which you can achieve the Parent-Child mechanism in the ManageEngine Service Desk Plus tool with the help of built-in options.
+
+>> In the MESDP ITSM tool, we have an in-built option of "Link Requests" by which a group of tickets can be linked together. After liking the request with the least ID, it acts as a Parent ticket, and all the remaining tickets
+that are linked to this request act as child tickets.
+>> First, we will add an additional field in the ticket templates where we can store the ticket ID of the Parent ticket for reference. This ticket ID can be populated by fetching details of child requests on the
+operation of "On Edit".
+>> When an engineer updates the Parent Ticket, we can call out a custom trigger that will run a custom function. This custom function will have the logic of fetching the Parent request details and updating those
+details on all linked child requests. This custom function can update the notes, status, group, technician, etc such fields on the child tickets from the parent ticket.
+>> Moreover, we can create restrictions on updating the child requests with the help of the Page Scripts functionality.
+>> This way, we can build a mechanism of bulk operations for the engineers.
+
+Benefits of this feature:
+
+>> Bulk operations can be performed on tickets, which leads to time saving. 
+>> Reduction of manual efforts.
+>> Customized process as per the requirement.
